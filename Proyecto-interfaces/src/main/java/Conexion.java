@@ -21,10 +21,10 @@ import java.util.logging.Logger;
  * @author alumno
  */
 public class Conexion {
-     private final String DB="czNJ8gixWD";
-     private final String URL="jdbc:mysql://remotemysql.com:3306/"+DB+"?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";;
-     private final String USER="czNJ8gixWD";
-      private final String PASS="xTww7cML8W";
+    private final String DB=System.getenv("DB");
+    private final String USER=System.getenv("USER");
+    private final String PASS=System.getenv("PASS");
+    private final String URL=System.getenv("URL");
       
     public Connection openConnection(){
         Connection con=null;
